@@ -58,6 +58,9 @@ $countData = mysqli_num_rows($queryMovies);
         .btn-warna4 {
             background-color: #dc3545;
         }
+        .background-movies{
+            background-color: #D1D8BE;
+        }
     </style>
 </head>
 
@@ -70,7 +73,7 @@ $countData = mysqli_num_rows($queryMovies);
             <p class="text-white fs-5">Eksplorasi ribuan film menarik hanya di sini</p>
         </div>
     </div>
-
+ <div class="background-movies">
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-3 mb-5" data-aos="fade-right">
@@ -89,7 +92,7 @@ $countData = mysqli_num_rows($queryMovies);
                 </div>
             </div>
 
-            <div class="col-lg-9" data-aos="fade-left">
+            <div class="col-lg-9 data-aos="fade-left">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h3 class="text-dark"><i class="fas fa-play-circle me-2 text-danger"></i> Movies</h3>
                 </div>
@@ -116,6 +119,7 @@ $countData = mysqli_num_rows($queryMovies);
             </div>
         </div>
     </div>
+ </div>
 
     <?php require "footer.php"; ?>
 

@@ -1,5 +1,5 @@
 .warna1 {
-  background-color: #3b3b1a;
+  background-color: #8a784e;
 }
 
 .warna2 {
@@ -13,9 +13,6 @@
 .warna4 {
   background-color: #ca7842;
 }
-
-
-
 
 .banner {
   height: 80vh;
@@ -72,225 +69,222 @@
   height: 50vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(../image/bgfilmku.jpg);
-    background-position: 50% 40% ;
+  background-position: 50% 40%;
 }
-
 
 .hover-scale {
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .hover-scale:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .filmku-img-rounded {
-    border-radius: 16px;
+  border-radius: 16px;
 }
 
 .filmku-desc-box {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    font-size: 1rem;
-    line-height: 1.7;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .filmku-badge-primary,
 .filmku-badge-secondary,
 .filmku-badge-warning {
-    display: inline-block;
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #fff;
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fff;
 }
 
 .filmku-badge-primary {
-    background-color: #007bff;
+  background-color: #007bff;
 }
 
 .filmku-badge-secondary {
-    background-color: #6c757d;
+  background-color: #6c757d;
 }
 
 .filmku-badge-warning {
-    background-color: #ffc107;
-    color: #000;
+  background-color: #ffc107;
+  color: #000;
 }
 
 .filmku-btn-watch {
-    display: inline-block;
-    background-color: #dc3545;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4);
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  background-color: #dc3545;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.4);
+  transition: background-color 0.3s ease;
 }
 
 .filmku-btn-watch:hover {
-    background-color: #bb2d3b;
-    color: #fff;
+  background-color: #bb2d3b;
+  color: #fff;
 }
 
 .filmku-card-related {
-    overflow: hidden;
-    border-radius: 16px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .filmku-card-related:hover {
-    transform: scale(1.03);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .filmku-related-img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 16px;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px;
 }
 
-        .banner-movies {
-            background: linear-gradient(to right, #141e30, #243b55);
-            height: 250px;
-        }
-
-        .no-decoration {
-            text-decoration: none;
-        }
-
-        .no-decoration:hover .list-group-item {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .card {
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: none;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-
-        .card-img-top {
-            height: 300px;
-            object-fit: cover;
-        }
-
-        .warna4 {
-            background-color: #007bff;
-        }
-
-        .warna4:hover {
-            background-color: #0056b3;
-        }
-
-        h1, h3 {
-            font-weight: bold;
-        }
-
-        .kategori-list .list-group-item {
-            border: none;
-            font-size: 1.1rem;
-            padding: 12px 20px;
-            transition: 0.3s;
-        }
-/* Sidebar Kategori */
-.sidebar-kategori {
-    background-color: #fff;
-    padding: 24px;
-    border-radius: 20px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+.banner-movies {
+  background: linear-gradient(to right, #141e30, #243b55);
+  height: 250px;
 }
 
-.sidebar-kategori h3 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #2c3e50;
-    border-left: 5px solid #007bff;
-    padding-left: 12px;
+.no-decoration {
+  text-decoration: none;
+}
+
+.no-decoration:hover .list-group-item {
+  background-color: #007bff;
+  color: white;
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+.warna4 {
+  background-color: #007bff;
+}
+
+.warna4:hover {
+  background-color: #0056b3;
+}
+
+h1,
+h3 {
+  font-weight: bold;
 }
 
 .kategori-list .list-group-item {
-    background-color: #f8f9fa;
-    border: none;
-    border-radius: 12px;
-    padding: 14px 18px;
-    margin-bottom: 12px;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #333;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  border: none;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  transition: 0.3s;
+}
+/* Sidebar Kategori */
+.sidebar-kategori {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.sidebar-kategori h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-left: 5px solid #007bff;
+  padding-left: 12px;
+}
+
+.kategori-list .list-group-item {
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .kategori-list .list-group-item:hover {
-    background-color: #007bff;
-    color: white;
-    transform: translateX(8px);
+  background-color: #007bff;
+  color: white;
+  transform: translateX(8px);
 }
 
 .kategori-icon {
-    color: #6c757d;
+  color: #6c757d;
 }
 
 /* Card Movie */
 .card {
-    border: none;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
-    background-color: #fff;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 .card-img-top {
-    height: 280px;
-    object-fit: cover;
+  height: 280px;
+  object-fit: cover;
 }
 
 .card-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #343a40;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #343a40;
 }
 
 .card-text {
-    color: #6c757d;
-    font-size: 0.95rem;
+  color: #6c757d;
+  font-size: 0.95rem;
 }
 
 .btn-warna4 {
-    background-color: #e74c3c;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: 0.3s ease;
+  background-color: #e74c3c;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .btn-warna4:hover {
-    background-color: #c0392b;
-    color: white;
+  background-color: #c0392b;
+  color: white;
 }
-
-
-
