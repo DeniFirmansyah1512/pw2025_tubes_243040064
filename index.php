@@ -13,6 +13,7 @@
         .hover-scale {
             transition: transform 0.3s ease;
         }
+
         .hover-scale:hover {
             transform: scale(1.03);
         }
@@ -26,8 +27,7 @@
     <div
         class="container-fluid py-5"
         style="background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('image/bgfilmku.jpg') center/cover no-repeat;"
-        data-aos="fade-up"
-    >
+        data-aos="fade-up">
         <div class="container">
             <div class="row align-items-center text-white">
                 <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
@@ -39,8 +39,7 @@
                                 type="text"
                                 class="form-control rounded-start"
                                 name="keyword"
-                                placeholder="Judul Movies | Genre"
-                            />
+                                placeholder="Judul Movies | Genre" />
                             <button type="submit" class="btn warna2 text-white rounded-end">🔍 Telusuri</button>
                         </div>
                     </form>
@@ -81,11 +80,9 @@
                         src="image/about-us.jpg"
                         class="img-fluid rounded-4 shadow"
                         alt="About Filmku"
-                        style="max-height: 300px"
-                    />
+                        style="max-height: 300px" />
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
-                    <h3 class="fw-bold mb-3">Tentang Filmku</h3>
                     <p class="lead">
                         "Filmku" adalah platform yang menyajikan beragam film pilihan dari berbagai genre, mulai dari drama,
                         aksi, hingga dokumenter. Temukan cerita luar biasa yang menginspirasi dan menggugah emosi Anda—semua
@@ -113,17 +110,14 @@
                             src="image/<?php echo $movies['foto']; ?>"
                             class="card-img-top rounded-top-4"
                             style="height: 300px; object-fit: cover;"
-                            alt="<?php echo $movies['judulfilm']; ?>"
-                        />
+                            alt="<?php echo $movies['judulfilm']; ?>" />
                         <div class="card-body">
                             <h5 class="card-title fw-bold"><?php echo $movies['judulfilm']; ?></h5>
                             <p class="card-text text-muted">🎭 <?php echo $movies['actor']; ?></p>
                             <p class="small text-muted">
                                 🕒 <?php echo $movies['durasi']; ?> | 📅 <?php echo $movies['tahunrilis']; ?>
                             </p>
-                            <a href="movies-detail.php?nama=<?php echo $movies['judulfilm']; ?>" class="btn btn-danger w-100 mt-2"
-                                >🎥 Lihat Detail</a
-                            >
+                            <a href="movies-detail.php?nama=<?php echo $movies['judulfilm']; ?>" class="btn btn-danger w-100 mt-2">🎥 Lihat Detail</a>
                         </div>
                     </div>
                 </div>
