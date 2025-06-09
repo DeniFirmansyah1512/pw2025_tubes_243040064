@@ -2,7 +2,7 @@
 require "session.php";
 require "../koneksi.php";
 
-$id = $_GET['p'] ?? '';
+$id = $_GET['id'] ?? '';
 
 if (empty($id)) {
     die("ID film tidak ditemukan.");

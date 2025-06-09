@@ -151,7 +151,7 @@ $jumlahmovies = mysqli_num_rows($querymovies);
                                 <p class="mb-1"><strong>Actor:</strong> <?= htmlspecialchars($data['actor']); ?></p>
                                 <p class="mb-1"><strong>Durasi:</strong> <?= htmlspecialchars($data['durasi']); ?></p>
                                 <p class="mb-1"><strong>Tahun:</strong> <?= htmlspecialchars($data['tahunrilis']); ?></p>
-                                <a href="movies.php?id=<?= $data['id'] ?>" class="btn btn-sm btn-outline-danger mt-2">Detail</a>
+                                <a href="movies-detail.php?id=<?= $data['id'] ?>" class="btn btn-sm btn-outline-danger mt-2">Detail</a>
 
                             </div>
                         </div>
