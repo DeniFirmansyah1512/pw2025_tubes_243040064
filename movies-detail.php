@@ -63,7 +63,7 @@ $queryMoviesTerkait = mysqli_query($con, "SELECT * FROM movies WHERE kategori_id
                     </div>
 
                     <!-- Tombol Nonton -->
-                    <a href="#" class="btn btn-danger btn-lg mt-3 shadow-sm px-4 py-2 rounded-3" data-aos="zoom-in" data-aos-delay="600">
+                    <a href="login.php" class="btn btn-danger btn-lg mt-3 shadow-sm px-4 py-2 rounded-3" data-aos="zoom-in" data-aos-delay="600">
                         🎬 Nonton Sekarang
                     </a>
                 </div>
