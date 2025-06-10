@@ -6,7 +6,7 @@
                 <a href="http://facebook.com"><i class=" fab fa-facebook fs-2"></i></a>
             </div>
             <div class="col-sm-1 d-flex justify-content-center mb2">
-                <a href="http://instagram.com"><i class=" fab fa-instagram fs-2"></i></a>
+                <a href="https://www.instagram.com/4ennyy_/"><i class=" fab fa-instagram fs-2"></i></a>
             </div>
             <div class="col-sm-1 d-flex justify-content-center mb2">
                <a href="http://twitter.com"> <i class=" fab fa-twitter fs-2"></i></a>

@@ -58,7 +58,7 @@ $countData = mysqli_num_rows($queryMovies);
         .btn-warna4 {
             background-color: #dc3545;
         }
-        .background-movies{
+        .background-movies {
             background-color: #D1D8BE;
         }
     </style>
@@ -73,53 +73,59 @@ $countData = mysqli_num_rows($queryMovies);
             <p class="text-white fs-5">Eksplorasi ribuan film menarik hanya di sini</p>
         </div>
     </div>
- <div class="background-movies">
-    <div class="container py-5">
-        <div class="row">
-            <div class="col-lg-3 mb-5" data-aos="fade-right">
-                <div class="p-4 border rounded shadow-sm bg-light">
-                    <h3 class="fs-4 mb-4"><i class="fas fa-film me-2"></i> Kategori</h3>
-                    <ul class="list-group kategori-list">
-                        <?php while ($kategoris = mysqli_fetch_array($queryKategoris)) { ?>
-                            <a class="no-decoration" href="movies.php?kategori=<?php echo $kategoris['nama']; ?>">
-                                <li class="list-group-item d-flex align-items-center">
-                                    <i class="fas fa-tags kategori-icon text-danger"></i>
-                                    <?php echo $kategoris['nama']; ?>
-                                </li>
-                            </a>
-                        <?php } ?>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="col-lg-9 data-aos="fade-left">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h3 class="text-dark"><i class="fas fa-play-circle me-2 text-danger"></i> Movies</h3>
+    <div class="background-movies">
+        <div class="container py-5">
+            <div class="row">
+                <!-- Sidebar Kategori -->
+                <div class="col-lg-3 mb-5" data-aos="fade-right">
+                    <div class="p-4 border rounded shadow-sm bg-light">
+                        <h3 class="fs-4 mb-4"><i class="fas fa-film me-2"></i> Kategori</h3>
+                        <ul class="list-group kategori-list">
+                            <?php while ($kategoris = mysqli_fetch_array($queryKategoris)) { ?>
+                                <a class="no-decoration" href="movies.php?kategori=<?php echo $kategoris['nama']; ?>">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="fas fa-tags kategori-icon text-danger"></i>
+                                        <?php echo $kategoris['nama']; ?>
+                                    </li>
+                                </a>
+                            <?php } ?>
+                        </ul>
+                    </div>
                 </div>
-                <div class="row g-4">
-                    <?php
-                    if ($countData < 1) {
-                        echo '<div class="col-12" data-aos="fade-up"><h4 class="text-center py-5">Movies yang anda cari tidak tersedia</h4></div>';
-                    }
-                    ?>
 
-                    <?php $i = 0; while ($data = mysqli_fetch_array($queryMovies)) { $delay = 100 * $i; ?>
-                        <div class="col-sm-6 col-md-4" data-aos="zoom-in-up" data-aos-delay="<?php echo $delay; ?>">
-                            <div class="card h-100 shadow-sm border-0 rounded-4">
-                                <img src="image/<?php echo $data['foto']; ?>" class="card-img-top rounded-top-4" alt="<?php echo $data['judulfilm']; ?>">
-                                <div class="card-body d-flex flex-column">
-                                    <h5 class="card-title fw-bold text-truncate"><?php echo $data['judulfilm']; ?></h5>
-                                    <p class="card-text text-muted small text-truncate">🎭 <?php echo $data['actor']; ?></p>
-                                    <a href="movies-detail.php?nama=<?php echo $data['judulfilm']; ?>" class="btn btn-warna4 text-white mt-auto">Tonton</a>
+                <!-- Movies -->
+                <div class="col-lg-9" data-aos="fade-left">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark"><i class="fas fa-play-circle me-2 text-danger"></i> Movies</h3>
+                        <input type="text" id="liveSearch" class="form-control w-50 ms-3" placeholder="Cari film atau kategori...">
+                    </div>
+
+                    <!-- Container hasil search -->
+                    <div class="row g-4" id="moviesContainer">
+                        <?php
+                        if ($countData < 1) {
+                            echo '<div class="col-12" data-aos="fade-up"><h4 class="text-center py-5">Movies yang anda cari tidak tersedia</h4></div>';
+                        }
+                        ?>
+
+                        <?php $i = 0; while ($data = mysqli_fetch_array($queryMovies)) { $delay = 100 * $i; ?>
+                            <div class="col-sm-6 col-md-4" data-aos="zoom-in-up" data-aos-delay="<?php echo $delay; ?>">
+                                <div class="card h-100 shadow-sm border-0 rounded-4">
+                                    <img src="image/<?php echo $data['foto']; ?>" class="card-img-top rounded-top-4" alt="<?php echo $data['judulfilm']; ?>">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title fw-bold text-truncate"><?php echo $data['judulfilm']; ?></h5>
+                                        <p class="card-text text-muted small text-truncate">🎭 <?php echo $data['actor']; ?></p>
+                                        <a href="movies-detail.php?nama=<?php echo $data['judulfilm']; ?>" class="btn btn-warna4 text-white mt-auto">Tonton</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php $i++; } ?>
+                        <?php $i++; } ?>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
- </div>
 
     <?php require "footer.php"; ?>
 
@@ -131,8 +137,21 @@ $countData = mysqli_num_rows($queryMovies);
             once: true,
             duration: 800
         });
+
+        // Live search AJAX
+        document.getElementById('liveSearch').addEventListener('keyup', function () {
+            let keyword = this.value;
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'search-movies.php?keyword=' + encodeURIComponent(keyword), true);
+            xhr.onload = function () {
+                if (this.status === 200) {
+                    document.getElementById('moviesContainer').innerHTML = this.responseText;
+                }
+            };
+            xhr.send();
+        });
     </script>
 </body>
-
 </html>
 
