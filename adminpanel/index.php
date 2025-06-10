@@ -75,7 +75,7 @@ $jumlahmovies = mysqli_num_rows($querymovies);
 
         .movie-card {
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-            background-color: #FBDB93;
+            background-color: #D1D8BE;
             border-radius: 10px;
         }
 

@@ -49,7 +49,7 @@ if (isset($_POST['registerbtn'])) {
         .register-box {
             width: 100%;
             max-width: 400px;
-            background-color: white;
+            background-color: #D1D8BE;
             border-radius: 15px;
             padding: 30px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);

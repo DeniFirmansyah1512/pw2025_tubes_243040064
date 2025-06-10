@@ -29,7 +29,7 @@ require "koneksi.php";
     .login-box {
         width: 100%;
         max-width: 400px;
-        background-color: rgba(255, 255, 255, 0.95);
+        background-color: #D1D8BE;
         border-radius: 15px;
         padding: 40px 35px;
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
@@ -55,7 +55,7 @@ require "koneksi.php";
     }
 
     .btn-success:hover {
-        background-color: #218838;
+        background-color: #A7C1A8;
     }
 
     .alert {
@@ -79,7 +79,7 @@ require "koneksi.php";
 
 <body>
     <div class="login-box shadow">
-        <h4 class="text-center mb-4 fw-bold text-primary">Login</h4>
+        <h4 class="text-center mb-4 fw-bold text-warning-emphasis">Login Filmku</h4>
         <form action="" method="post" novalidate>
             <div class="mb-4">
                 <label for="username" class="form-label">Username</label>

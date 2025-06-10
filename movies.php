@@ -45,19 +45,24 @@ $countData = mysqli_num_rows($queryMovies);
             height: 250px;
             object-fit: cover;
         }
+
         .sidebar-kategori h3 {
             border-bottom: 2px solid #ccc;
             padding-bottom: 10px;
         }
+
         .kategori-list a {
             text-decoration: none;
         }
+
         .kategori-icon {
             margin-right: 8px;
         }
+
         .btn-warna4 {
             background-color: #dc3545;
         }
+
         .background-movies {
             background-color: #D1D8BE;
         }
@@ -105,11 +110,13 @@ $countData = mysqli_num_rows($queryMovies);
                     <div class="row g-4" id="moviesContainer">
                         <?php
                         if ($countData < 1) {
-                            echo '<div class="col-12" data-aos="fade-up"><h4 class="text-center py-5">Movies yang anda cari tidak tersedia</h4></div>';
+                            echo '<div class="col-12" data-aos="fade-up"><h4 class="text-center py-5">  Movies | Genre yang anda cari tidak tersedia</h4></div>';
                         }
                         ?>
 
-                        <?php $i = 0; while ($data = mysqli_fetch_array($queryMovies)) { $delay = 100 * $i; ?>
+                        <?php $i = 0;
+                        while ($data = mysqli_fetch_array($queryMovies)) {
+                            $delay = 100 * $i; ?>
                             <div class="col-sm-6 col-md-4" data-aos="zoom-in-up" data-aos-delay="<?php echo $delay; ?>">
                                 <div class="card h-100 shadow-sm border-0 rounded-4">
                                     <img src="image/<?php echo $data['foto']; ?>" class="card-img-top rounded-top-4" alt="<?php echo $data['judulfilm']; ?>">
@@ -120,7 +127,8 @@ $countData = mysqli_num_rows($queryMovies);
                                     </div>
                                 </div>
                             </div>
-                        <?php $i++; } ?>
+                        <?php $i++;
+                        } ?>
                     </div>
                 </div>
             </div>
@@ -139,12 +147,12 @@ $countData = mysqli_num_rows($queryMovies);
         });
 
         // Live search AJAX
-        document.getElementById('liveSearch').addEventListener('keyup', function () {
+        document.getElementById('liveSearch').addEventListener('keyup', function() {
             let keyword = this.value;
 
             const xhr = new XMLHttpRequest();
             xhr.open('GET', 'search-movies.php?keyword=' + encodeURIComponent(keyword), true);
-            xhr.onload = function () {
+            xhr.onload = function() {
                 if (this.status === 200) {
                     document.getElementById('moviesContainer').innerHTML = this.responseText;
                 }
@@ -153,5 +161,5 @@ $countData = mysqli_num_rows($queryMovies);
         });
     </script>
 </body>
-</html>
 
+</html>
