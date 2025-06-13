@@ -8,8 +8,8 @@ $jumlahkategoris = mysqli_num_rows($querykategoris);
 
 if (isset($_POST['simpan_kategoris'])) {
     $kategori = htmlspecialchars($_POST['kategoris']);
-    
-    
+
+
     $cek = mysqli_query($con, "SELECT * FROM kategoris WHERE nama='$kategori'");
     if (mysqli_num_rows($cek) == 0) {
         mysqli_query($con, "INSERT INTO kategoris (nama) VALUES ('$kategori')");
@@ -37,31 +37,35 @@ if (isset($_POST['simpan_kategoris'])) {
 </head>
 
 <style>
+    body {
+        background-image: url(../image/bgfilmku.jpg);
+    }
+
     .no-decoration {
         text-decoration: none;
     }
 </style>
 
-<body class="bg-light">
+<body class="">
     <?php require "navbar.php"; ?>
-    <div class="container mt-5 p-4 bg-white rounded shadow-sm" style="max-width: 900px;">
+    <div class="container mt-5 p-4 rounded shadow-sm" style="max-width: 900px; background-color: transparent;">
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb bg-white px-0 mb-4">
+            <ol class="breadcrumb bg-transparent px-0 mb-4">
                 <li class="breadcrumb-item">
-                    <a href="../adminpanel" class="text-decoration-none text-muted">
-                        <i class="fas fa-home"></i> Home
+                    <a href="../adminpanel" class="text-decoration-none text-white">
+                        <i class="fas fa-home text-white"></i> Home
                     </a>
                 </li>
-                <li class="breadcrumb-item active" aria-current="page">Kategoris</li>
+                <li class="breadcrumb-item active text-white" aria-current="page">Kategoris</li>
             </ol>
         </nav>
 
-        <div class="mb-5">
-            <h3 class="text-primary fw-bold mb-4">Tambah Kategori</h3>
+        <div class="mb-5 ">
+            <h3 class="text-white fw-bold mb-4">Tambah Kategori</h3>
 
             <form action="" method="post">
                 <div class="mb-3">
-                    <label for="kategoris" class="form-label fw-semibold">Kategori</label>
+                    <label for="kategoris" class="form-label fw-semibold text-white">Kategori</label>
                     <input type="text" id="kategoris" name="kategoris" placeholder="Input nama kategori" class="form-control" required>
                 </div>
                 <button class="btn btn-primary px-4" type="submit" name="simpan_kategoris">Simpan</button>
@@ -69,7 +73,7 @@ if (isset($_POST['simpan_kategoris'])) {
         </div>
 
         <div>
-            <h2 class="text-primary fw-semibold mb-4">List Kategori</h2>
+            <h2 class="text-white fw-semibold mb-4">List Kategori</h2>
 
             <div class="table-responsive">
                 <table class="table table-hover align-middle">
@@ -88,11 +92,11 @@ if (isset($_POST['simpan_kategoris'])) {
                                 <td colspan="3" class="text-center text-muted fst-italic">Data Kategoris tidak ada</td>
                             </tr>
 
-                        <?php
+                            <?php
                         } else {
                             $jumlah = 1;
                             while ($data = mysqli_fetch_array($querykategoris)) {
-                        ?>
+                            ?>
                                 <tr>
                                     <td><?php echo $jumlah; ?></td>
                                     <td><?php echo htmlspecialchars($data['nama']); ?></td>
@@ -112,6 +116,7 @@ if (isset($_POST['simpan_kategoris'])) {
             </div>
         </div>
     </div>
+
 
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../fontawesome/js/all.min.js"></script>

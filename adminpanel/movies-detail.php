@@ -38,7 +38,7 @@ function generateRandomString($length = 10)
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
-            background-color: #f8f9fa;
+            background-image: url(../image/bgfilmku.jpg);
         }
         .card {
             max-width: 700px;

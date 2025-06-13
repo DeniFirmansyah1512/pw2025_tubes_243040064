@@ -30,7 +30,7 @@ function generateRandomString($length = 10)
     <link rel="stylesheet" href="../fontawesome/css/all.min.css">
     <style>
         body {
-            background-color: #f8f9fa;
+            background-image: url(../image/bgfilmku.jpg);
         }
 
         .movie-thumb {
@@ -44,8 +44,8 @@ function generateRandomString($length = 10)
 
 <body>
     <?php require "navbar.php"; ?>
-    <div class="container my-5">
-        <h2 class="mb-4">Tambah Film</h2>
+    <div class="container my-5 text-white">
+        <h2 class="mb-4 ">Tambah Film</h2>
 
         <form action="" method="post" enctype="multipart/form-data">
             <div class="mb-3">
@@ -136,7 +136,7 @@ function generateRandomString($length = 10)
 
     <!-- Tabel Daftar Movie -->
     <div class="container mb-5">
-        <h3 class="mb-3">Daftar Film (<?= $jumlahmovies ?>)</h3>
+        <h3 class="mb-3 text-white">Daftar Film (<?= $jumlahmovies ?>)</h3>
         <div class="table-responsive">
             <table class="table table-striped align-middle">
                 <thead>

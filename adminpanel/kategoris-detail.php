@@ -20,15 +20,15 @@ $data = mysqli_fetch_array($query);
     <style>
         /* Navbar fixed top */
         body {
-            /* padding-top: 70px; */
-            background-color: #f8f9fa;
+
+            background-image: url(../image/bgfilmku.jpg);
             font-family: 'Poppins', sans-serif;
         }
 
         nav.navbar {
             box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-            background-color:rgb(24, 37, 56) !important;
-            
+            background-color: rgb(24, 37, 56) !important;
+
         }
 
         nav.navbar .navbar-brand,
@@ -208,4 +208,3 @@ $data = mysqli_fetch_array($query);
 </body>
 
 </html>
-
