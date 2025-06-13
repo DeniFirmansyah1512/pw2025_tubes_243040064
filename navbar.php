@@ -16,7 +16,6 @@ session_start();
                 <li class="nav-item">
                     <a class="nav-link" href="movies.php">Movies</a>
                 </li>
-
                 <?php if (isset($_SESSION['username'])): ?>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>

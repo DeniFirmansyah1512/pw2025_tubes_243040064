@@ -26,15 +26,15 @@ require "koneksi.php";
         padding: 20px;
     }
 
-    .login-box {
-        width: 100%;
-        max-width: 400px;
-        background-color: #D1D8BE;
-        border-radius: 15px;
-        padding: 40px 35px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-        transition: transform 0.3s ease;
-    }
+.login-box {
+    background-color: rgba(255, 255, 255, 0.2); /* Putih dengan 20% opacity */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Bayangan untuk kontras */
+    backdrop-filter: blur(10px); /* Blur latar belakang di belakang box */
+    -webkit-backdrop-filter: blur(10px); /* Untuk dukungan Safari */
+}
+
 
     .login-box:hover {
         transform: translateY(-5px);
@@ -85,7 +85,7 @@ require "koneksi.php";
                 <label for="username" class="form-label">Username</label>
                 <input type="text" class="form-control form-control-lg" name="username" id="username" required autofocus />
             </div>
-            <div class="mb-4">
+            <div class="mb-4 text-light">
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control form-control-lg" name="password" id="password" required />
             </div>
